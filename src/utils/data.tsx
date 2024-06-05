@@ -24,7 +24,7 @@ import {
 import { AiOutlineForm } from 'react-icons/ai'
 import { MdErrorOutline, MdPages } from 'react-icons/md'
 
-import { routePath, menuItems, status } from 'utils/enums'
+import { MenuItems, routePath } from "utils/enums";
 
 const {
   toDashboard,
@@ -48,37 +48,37 @@ const {
   toTodoList,
   toGallery,
   toDocumentation,
-} = routePath
+} = routePath;
 const {
-  dashboard,
-  widgets,
+  Dashboard,
+  Widgets,
   UIElements,
-  advanceUI,
-  formElements,
-  editors,
-  charts,
-  tables,
-  popups,
-  notification,
-  icons,
-  maps,
-  userPages,
-  errorPages,
-  generalPages,
+  AdvanceUI,
+  FormElements,
+  Editors,
+  Charts,
+  Tables,
+  Popups,
+  Notification,
+  Icons,
+  Maps,
+  UserPages,
+  ErrorPages,
+  GeneralPages,
   ECommerce,
   Email,
-  calendar,
-  todoList,
-  gallery,
-  documentation,
-} = menuItems
+  Calendar,
+  TodoList,
+  Gallery,
+  Documentation,
+} = MenuItems;
 
 export const sidebarMenuItems = [
   {
     key: 1,
     icon: <FaHome />,
     path: toDashboard,
-    name: dashboard,
+    name: Dashboard,
     routesArray: [toDashboard],
     selected: true,
     subMenu: [],
@@ -87,7 +87,7 @@ export const sidebarMenuItems = [
     key: 2,
     icon: <FaDiceD6 />,
     path: toWidgets,
-    name: widgets,
+    name: Widgets,
     routesArray: [toWidgets],
     selected: true,
     subMenu: [],
@@ -105,7 +105,7 @@ export const sidebarMenuItems = [
     key: 4,
     icon: <BsLayoutWtf />,
     path: toAdvanceUI,
-    name: advanceUI,
+    name: AdvanceUI,
     routesArray: [toAdvanceUI],
     selected: true,
     subMenu: [],
@@ -114,7 +114,7 @@ export const sidebarMenuItems = [
     key: 5,
     icon: <FaWpforms />,
     path: toFormElements,
-    name: formElements,
+    name: FormElements,
     routesArray: [toFormElements],
     selected: true,
     subMenu: [],
@@ -123,7 +123,7 @@ export const sidebarMenuItems = [
     key: 6,
     icon: <AiOutlineForm />,
     path: toEditors,
-    name: editors,
+    name: Editors,
     routesArray: [toEditors],
     selected: true,
     subMenu: [],
@@ -132,7 +132,7 @@ export const sidebarMenuItems = [
     key: 7,
     icon: <FaChartLine />,
     path: toCharts,
-    name: charts,
+    name: Charts,
     routesArray: [toCharts],
     selected: true,
     subMenu: [],
@@ -141,7 +141,7 @@ export const sidebarMenuItems = [
     key: 8,
     icon: <BsTable />,
     path: toTables,
-    name: tables,
+    name: Tables,
     routesArray: [toTables],
     selected: true,
     subMenu: [],
@@ -150,7 +150,7 @@ export const sidebarMenuItems = [
     key: 9,
     icon: <FaRegSquare />,
     path: toPopups,
-    name: popups,
+    name: Popups,
     routesArray: [toPopups],
     selected: true,
     subMenu: [],
@@ -159,7 +159,7 @@ export const sidebarMenuItems = [
     key: 10,
     icon: <FaBell />,
     path: toNotification,
-    name: notification,
+    name: Notification,
     routesArray: [toNotification],
     selected: true,
     subMenu: [],
@@ -168,7 +168,7 @@ export const sidebarMenuItems = [
     key: 11,
     icon: <FaIcons />,
     path: toIcons,
-    name: icons,
+    name: Icons,
     routesArray: [toIcons],
     selected: true,
     subMenu: [],
@@ -177,7 +177,7 @@ export const sidebarMenuItems = [
     key: 12,
     icon: <FaMapMarkerAlt />,
     path: toMaps,
-    name: maps,
+    name: Maps,
     routesArray: [toMaps],
     selected: true,
     subMenu: [],
@@ -186,7 +186,7 @@ export const sidebarMenuItems = [
     key: 13,
     icon: <MdPages />,
     path: toUserPages,
-    name: userPages,
+    name: UserPages,
     routesArray: [toUserPages],
     selected: true,
     subMenu: [],
@@ -195,7 +195,7 @@ export const sidebarMenuItems = [
     key: 14,
     icon: <MdErrorOutline />,
     path: toErrorPages,
-    name: errorPages,
+    name: ErrorPages,
     routesArray: [toErrorPages],
     selected: true,
     subMenu: [],
@@ -204,7 +204,7 @@ export const sidebarMenuItems = [
     key: 15,
     icon: <FaSlackHash />,
     path: toGeneralPages,
-    name: generalPages,
+    name: GeneralPages,
     routesArray: [toGeneralPages],
     selected: true,
     subMenu: [],
@@ -231,7 +231,7 @@ export const sidebarMenuItems = [
     key: 18,
     icon: <BsCalendar />,
     path: toCalendar,
-    name: calendar,
+    name: Calendar,
     routesArray: [toCalendar],
     selected: true,
     subMenu: [],
@@ -240,7 +240,7 @@ export const sidebarMenuItems = [
     key: 19,
     icon: <FaListUl />,
     path: toTodoList,
-    name: todoList,
+    name: TodoList,
     routesArray: [toTodoList],
     selected: true,
     subMenu: [],
@@ -249,7 +249,7 @@ export const sidebarMenuItems = [
     key: 20,
     icon: <FaPhotoVideo />,
     path: toGallery,
-    name: gallery,
+    name: Gallery,
     routesArray: [toGallery],
     selected: true,
     subMenu: [],
@@ -258,108 +258,117 @@ export const sidebarMenuItems = [
     key: 21,
     icon: <FaPollH />,
     path: toDocumentation,
-    name: documentation,
+    name: Documentation,
     routesArray: [toDocumentation],
     selected: true,
     subMenu: [],
   },
-]
+];
 
 export const dummyActivities = [
   {
     id: 1,
-    recent: '42 mins ago',
+    recent: "42 mins ago",
     icon: (
-      <FaListUl className='rounded-circle fs-1 me-3 status-icon bg-orange text-white' />
+      <FaListUl className="rounded-circle fs-1 me-3 status-icon bg-orange text-white" />
     ),
-    title: 'Task Updated',
-    name: 'Dharmik',
-    status: 'Updated a Task',
+    title: "Task Updated",
+    name: "Dharmik",
+    status: "Updated a Task",
   },
   {
     id: 2,
-    recent: '1 day ago',
+    recent: "1 day ago",
     icon: (
-      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+      <FaBolt className="rounded-circle fs-1 me-3 status-icon bg-info text-white" />
     ),
-    title: 'Deal Added',
-    name: 'Panshi',
-    status: 'Updated a Task',
+    title: "Deal Added",
+    name: "Panshi",
+    status: "Updated a Task",
   },
   {
     id: 3,
-    recent: '42 minutes ago',
+    recent: "42 minutes ago",
     icon: (
-      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+      <FaBolt className="rounded-circle fs-1 me-3 status-icon bg-info text-white" />
     ),
-    title: 'Published Article',
-    name: 'Rasel',
-    status: 'Updated a Task',
+    title: "Published Article",
+    name: "Rasel",
+    status: "Updated a Task",
   },
   {
     id: 4,
-    recent: '1 day ago',
+    recent: "1 day ago",
     icon: (
-      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+      <FaBolt className="rounded-circle fs-1 me-3 status-icon bg-info text-white" />
     ),
-    title: 'Dock Updated',
-    name: 'Reshmi',
-    status: 'Updated a Dock',
+    title: "Dock Updated",
+    name: "Reshmi",
+    status: "Updated a Dock",
   },
   {
     id: 5,
-    recent: '1 day ago',
+    recent: "1 day ago",
     icon: (
-      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+      <FaBolt className="rounded-circle fs-1 me-3 status-icon bg-info text-white" />
     ),
-    title: 'Replayed Comment',
-    name: 'Jenathon',
-    status: 'Added a Comment',
+    title: "Replayed Comment",
+    name: "Jenathon",
+    status: "Added a Comment",
   },
-]
+];
 
-export const dummyTableData = [
+type dummyTableDataTypes = {
+  id: number;
+  invoice: number;
+  customers: string;
+  from: string;
+  price: string;
+  status: "process" | "open" | "on-hold";
+}[];
+
+export const dummyTableData: dummyTableDataTypes = [
   {
     id: 1,
     invoice: 12386,
-    customers: 'Dharmik Shah',
-    from: 'India',
-    price: '$462',
-    status: status.inProcess,
+    customers: "Dharmik Shah",
+    from: "India",
+    price: "$462",
+    status: "process",
   },
   {
     id: 2,
     invoice: 12386,
-    customers: 'Mark Zuckerberg',
-    from: 'USA',
-    price: '$2995',
-    status: status.open,
+    customers: "Mark Zuckerberg",
+    from: "USA",
+    price: "$2995",
+    status: "open",
   },
   {
     id: 3,
     invoice: 12386,
-    customers: 'Marko',
-    from: 'Brazil',
-    price: '$299',
-    status: status.onHold,
+    customers: "Marko",
+    from: "Brazil",
+    price: "$299",
+    status: "on-hold",
   },
   {
     id: 4,
     invoice: 12386,
-    customers: 'Bill Gates',
-    from: 'Pakistan',
-    price: '$30',
-    status: status.inProcess,
+    customers: "Bill Gates",
+    from: "Pakistan",
+    price: "$30",
+    status: "process",
   },
   {
     id: 5,
     invoice: 12386,
-    customers: 'Mr Incredible',
-    from: 'Russia',
-    price: '$956',
-    status: status.open,
+    customers: "Mr Incredible",
+    from: "Russia",
+    price: "$956",
+    status: "open",
   },
-]
+];
 export const dummyStatusData = [
   {
     id: 1,

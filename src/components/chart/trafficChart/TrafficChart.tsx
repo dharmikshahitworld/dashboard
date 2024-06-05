@@ -4,19 +4,18 @@ import './TrafficChart.scss'
 
 export const TrafficChart = () => {
   return (
-    <div className='traffic-chart'>
+    <div className="traffic-chart">
       <Doughnut
-        type='doughnut'
         data={{
-          labels: ['Red', 'Blue', 'Yellow'],
+          labels: ["Red", "Blue", "Yellow"],
           datasets: [
             {
-              label: 'My First Dataset',
+              label: "My First Dataset",
               data: [55, 34, 11],
               backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(254,198,0)',
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(254,198,0)",
               ],
               hoverOffset: 4,
             },
@@ -33,5 +32,5 @@ export const TrafficChart = () => {
         }}
       />
     </div>
-  )
+  );
 }
